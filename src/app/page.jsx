@@ -9,8 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { buttonVariants, Button } from "@/components/ui/button";
-import { Soal5Page } from "./Soal5/page";
-import { useNavigate } from "react-router-dom";
+import Link from "next/link";
 
 const cardData = [
   {
@@ -59,13 +58,14 @@ export default function Home() {
               </CardDescription>
             </CardHeader>
             <CardFooter className="flex flex-row-reverse">
-              <Button
-                variant="ghost"
-                className="hover:text-purple-800 hover:bg-purple-100"
-                s
-              >
-                More
-              </Button>
+              <Link href={`/${card.title.replace(" ", "")}`}>
+                <Button
+                  variant="ghost"
+                  className="hover:text-purple-800 hover:bg-purple-100"
+                >
+                  More
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         ))}
