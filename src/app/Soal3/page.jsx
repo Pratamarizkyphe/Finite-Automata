@@ -30,7 +30,7 @@ E|B,C,end`;
   // mermaid
   const [mermaidCode, setMermaidCode] = React.useState(`
     flowchart LR
-    start --> idA(( A ))
+    
   `);
 
   // key
